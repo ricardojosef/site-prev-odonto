@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prev Odonto | Consultório Odontológico em Uberlândia — Ortodontia, Implantes e Cirurgia</title>
+<meta name="description" content="Equipe de dentistas especializados em Uberlândia. Ortodontia, clínica geral, cirurgia e implantes para você e sua família. Avenida Sete de Setembro, 350 — Pacaembu.">
+
+<!-- ============================================================
+     IMAGENS NECESSÁRIAS (coloque tudo na pasta /img)
+     ------------------------------------------------------------
+     img/logo-prev-odonto.png ....... logo (a que você enviou, fundo transparente)
+     img/hero-desktop.jpg ........... 1920 x 900px  — fundo da hero SÓ no desktop
+     img/hero-mobile.jpg ............ 800 x 600px   — imagem que aparece ACIMA da logo SÓ no mobile
+     img/especialista.jpg ........... 900 x 1100px  — foto do especialista (lado direito da hero)
+     img/equipe.jpg ................. 1000 x 1200px — foto da equipe (Quem somos)
+     img/textura-azul.jpg ........... 1920 x 1080px — degradê azul que você enviou (fundo de seções)
+     img/caso-1-antes.jpg / img/caso-1-depois.jpg .... 800 x 800px
+     img/caso-2-antes.jpg / img/caso-2-depois.jpg .... 800 x 800px
+     img/caso-3-antes.jpg / img/caso-3-depois.jpg .... 800 x 800px
+     img/consultorio.jpg ............ 1200 x 800px  — ambiente da clínica (Agende sua consulta)
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --azul-profundo:#0B1873;
+  --azul:#1B2CA8;
+  --azul-eletrico:#2B44D6;
+  --lavanda:#B9C2F2;
+  --lavanda-claro:#EEF1FC;
+  --branco:#FFFFFF;
+  --dourado:#D9B26A;
+  --dourado-claro:#F0DDB4;
+  --tinta:#0A1140;
+  --tinta-suave:#4A5486;
+
+  --ff-display:'Sora', system-ui, -apple-system, sans-serif;
+  --ff-body:'Sora', system-ui, -apple-system, sans-serif;
+
+  --raio:26px;
+  --raio-sm:16px;
+  --maxw:1240px;
+  --sombra:0 30px 70px -30px rgba(11,24,115,.45);
+  --sombra-sm:0 16px 40px -20px rgba(11,24,115,.4);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ff-body);
+  color:var(--tinta);
+  background:var(--branco);
+  line-height:1.65;
+  overflow-x:hidden;
+  font-size:17px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:3px solid var(--dourado);outline-offset:3px;border-radius:6px}
+
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+.eyebrow{
+  font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dourado);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--dourado);display:block}
+.eyebrow.centro{justify-content:center}
+
+h1,h2,h3{font-family:var(--ff-display);font-weight:600;line-height:1.14;letter-spacing:-.035em}
+h2{font-size:clamp(1.85rem,4vw,3.1rem);margin-bottom:20px}
+h3{font-size:1.3rem;line-height:1.3;letter-spacing:-.02em;margin-bottom:12px}
+h2 em{font-style:normal;font-weight:300;color:var(--azul-eletrico)}
+.sec-escura h2 em{color:var(--dourado-claro)}
+
+p{color:var(--tinta-suave)}
+.lead{font-size:1.1rem;max-width:62ch}
+
+section{padding:110px 0;position:relative}
+.centro{text-align:center}
+.centro .lead{margin-left:auto;margin-right:auto}
+
+/* Assinatura visual: o "arco" — referência ao arco dentário */
+.arco{border-radius:999px 999px var(--raio) var(--raio)}
+
+/* Botões */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:18px 36px;border-radius:999px;border:0;cursor:pointer;
+  font-family:var(--ff-body);font-size:1rem;font-weight:700;letter-spacing:.01em;
+  position:relative;overflow:hidden;transition:box-shadow .4s ease,color .3s ease;
+}
+.btn span{position:relative;z-index:2}
+.btn::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(120deg,var(--dourado),var(--dourado-claro));
+  transform:translateY(101%);transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.btn:hover::after,.btn:focus-visible::after{transform:translateY(0)}
+.btn-primario{
+  background:linear-gradient(120deg,var(--azul-eletrico),var(--azul-profundo));
+  color:var(--branco);box-shadow:0 18px 40px -18px rgba(43,68,214,.9);
+}
+.btn-primario:hover{color:var(--azul-profundo)}
+.btn-claro{background:var(--branco);color:var(--azul-profundo);box-shadow:var(--sombra-sm)}
+.btn-contorno{background:transparent;color:var(--branco);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn-contorno:hover{color:var(--azul-profundo)}
+
+/* Vidro */
+.vidro{
+  background:linear-gradient(150deg,rgba(255,255,255,.16),rgba(255,255,255,.05));
+  border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-radius:var(--raio);
+}
+.vidro-claro{
+  background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(238,241,252,.6));
+  border:1px solid rgba(27,44,168,.1);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-radius:var(--raio);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.topo{
+  position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;
+  transition:background .45s ease,box-shadow .45s ease,padding .45s ease,backdrop-filter .45s ease;
+}
+.topo.fixo{
+  background:rgba(255,255,255,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 10px 30px -22px rgba(11,24,115,.6);padding:8px 0;
+}
+.topo-in{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.topo-logo{height:52px;width:auto;transition:height .4s ease}
+.topo.fixo .topo-logo{height:44px}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{
+  font-size:.93rem;font-weight:600;color:var(--azul-profundo);position:relative;padding:4px 0;
+}
+.nav a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;
+  background:var(--dourado);transform:scaleX(0);transform-origin:right;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.topo .btn{padding:13px 26px;font-size:.9rem}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--azul-profundo)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:900px;display:flex;align-items:center;
+  padding:150px 0 90px;overflow:hidden;
+  background:linear-gradient(165deg,#3A4BD8 0%,var(--azul) 42%,var(--azul-profundo) 100%);
+}
+/* fundo 1920 x altura da seção — some no mobile */
+.hero-bg-desktop{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:1920px;height:100%;max-width:none;object-fit:cover;z-index:0;opacity:.5;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(60% 55% at 12% 8%,rgba(185,194,242,.5),transparent 70%),
+    linear-gradient(100deg,rgba(11,24,115,.92) 0%,rgba(11,24,115,.7) 45%,rgba(11,24,115,.25) 100%);
+}
+.hero .container{position:relative;z-index:3}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+
+/* imagem que só aparece no mobile, acima da logo */
+.hero-img-mobile{display:none}
+
+.hero-logo{height:86px;width:auto;margin-bottom:32px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+.hero-selo{
+  display:inline-flex;align-items:center;gap:10px;padding:9px 20px;border-radius:999px;
+  font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dourado-claro);margin-bottom:24px;
+}
+.hero h1{
+  font-size:clamp(2.3rem,4.9vw,4rem);color:var(--branco);margin-bottom:24px;font-weight:600;
+}
+.hero h1 em{font-style:normal;font-weight:300;color:var(--dourado-claro)}
+.hero-sub{color:rgba(255,255,255,.9);font-size:1.16rem;max-width:54ch;margin-bottom:22px}
+.hero-sub strong{color:var(--branco);font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;margin:34px 0 40px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px}
+.hero-tags li{
+  padding:9px 18px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--branco);
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+
+/* foto do especialista */
+.hero-foto{position:relative}
+.hero-foto-moldura{
+  position:relative;overflow:hidden;border-radius:280px 280px var(--raio) var(--raio);
+  border:1px solid rgba(255,255,255,.4);box-shadow:0 40px 90px -30px rgba(0,0,0,.6);
+}
+.hero-foto-moldura img{width:100%;height:640px;object-fit:cover;object-position:top center}
+.hero-foto-moldura::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(11,24,115,.55),transparent 45%);
+}
+.hero-card{
+  position:absolute;left:-38px;bottom:44px;padding:20px 26px;z-index:4;max-width:270px;
+}
+.hero-card strong{display:block;color:var(--branco);font-family:var(--ff-display);font-size:1.2rem;font-weight:500}
+.hero-card span{display:block;color:var(--lavanda);font-size:.85rem;margin-top:4px;line-height:1.4}
+.hero-card .cro{color:var(--dourado-claro);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}
+
+/* ============================================================
+   BARRA DE ESPECIALIDADES
+   ============================================================ */
+.barra{background:var(--azul-profundo);padding:0;overflow:hidden}
+.barra-in{display:flex;align-items:center;gap:56px;padding:22px 0;white-space:nowrap;will-change:transform}
+.barra-item{
+  display:inline-flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);
+  font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+}
+.barra-item::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--dourado)}
+
+/* ============================================================
+   BENEFÍCIOS
+   ============================================================ */
+.beneficios{background:linear-gradient(180deg,var(--branco) 0%,var(--lavanda-claro) 100%)}
+.beneficios::before{
+  content:"";position:absolute;top:-140px;right:-120px;width:460px;height:460px;border-radius:50%;
+  background:radial-gradient(circle,rgba(43,68,214,.14),transparent 68%);filter:blur(6px);
+}
+.grid-ben{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.card-ben{padding:38px 32px;position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
+.card-ben:hover{transform:translateY(-10px);box-shadow:var(--sombra)}
+.card-ben-icone{
+  width:60px;height:60px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px;
+  background:linear-gradient(140deg,var(--azul-eletrico),var(--azul-profundo));color:var(--branco);
+  box-shadow:0 14px 30px -14px rgba(43,68,214,.9);
+}
+.card-ben-icone svg{width:28px;height:28px}
+.card-ben p{font-size:.98rem}
+
+/* ============================================================
+   QUEM SOMOS
+   ============================================================ */
+.quem{background:var(--branco)}
+.quem-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:center}
+.quem-foto{position:relative}
+.quem-foto img{
+  width:100%;height:660px;object-fit:cover;border-radius:300px 300px var(--raio) var(--raio);
+  box-shadow:var(--sombra);
+}
+.quem-foto::before{
+  content:"";position:absolute;inset:-22px -22px 40px 26px;z-index:-1;
+  border-radius:320px 320px var(--raio) var(--raio);
+  background:linear-gradient(150deg,var(--lavanda),rgba(43,68,214,.12));
+}
+.quem-stat{
+  position:absolute;right:-26px;bottom:52px;padding:24px 28px;text-align:center;
+  background:var(--branco);border-radius:var(--raio-sm);box-shadow:var(--sombra);
+  border-top:3px solid var(--dourado);
+}
+.quem-stat b{display:block;font-family:var(--ff-display);font-size:2.3rem;color:var(--azul-profundo);line-height:1}
+.quem-stat span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave)}
+.quem p+p{margin-top:18px}
+.quem-lista{margin-top:32px;display:grid;gap:14px}
+.quem-lista li{display:flex;gap:14px;align-items:flex-start;font-size:1rem;color:var(--tinta)}
+.quem-lista svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--dourado)}
+
+/* ============================================================
+   QUADROS ATENDIDOS
+   ============================================================ */
+.quadros{
+  background:linear-gradient(160deg,var(--azul-profundo) 0%,var(--azul) 55%,#2D3FC4 100%);
+  color:var(--branco);overflow:hidden;
+}
+.quadros-bg{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;mix-blend-mode:screen;
+}
+.quadros .container{position:relative;z-index:2}
+.quadros h2,.quadros h3{color:var(--branco)}
+.quadros .lead{color:rgba(255,255,255,.82)}
+.grid-quadros{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.card-quadro{
+  padding:34px 30px;transition:transform .5s cubic-bezier(.2,.7,.2,1),background .5s ease,border-color .5s ease;
+}
+.card-quadro:hover{transform:translateY(-8px);background:linear-gradient(150deg,rgba(255,255,255,.26),rgba(255,255,255,.08));border-color:rgba(217,178,106,.6)}
+.card-quadro h3{font-size:1.2rem;margin-bottom:10px}
+.card-quadro p{color:rgba(255,255,255,.78);font-size:.95rem}
+.card-quadro .num{
+  font-family:var(--ff-display);font-size:.9rem;color:var(--dourado-claro);
+  letter-spacing:.18em;display:block;margin-bottom:16px;
+}
+
+/* ============================================================
+   RESULTADOS
+   ============================================================ */
+.resultados{background:linear-gradient(180deg,var(--lavanda-claro),var(--branco))}
+.grid-casos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.caso{background:var(--branco);border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra-sm);transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
+.caso:hover{transform:translateY(-8px);box-shadow:var(--sombra)}
+.caso-imgs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--lavanda);position:relative}
+.caso-imgs figure{position:relative;margin:0}
+.caso-imgs img{width:100%;height:230px;object-fit:cover}
+.caso-imgs figcaption{
+  position:absolute;left:12px;bottom:12px;padding:6px 14px;border-radius:999px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  background:rgba(10,17,64,.72);color:var(--branco);backdrop-filter:blur(8px);
+}
+.caso-imgs figure:last-child figcaption{background:linear-gradient(120deg,var(--dourado),var(--dourado-claro));color:var(--azul-profundo)}
+.caso-txt{padding:28px 28px 32px}
+.caso-txt .tag{
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--azul-eletrico);
+}
+.caso-txt h3{font-size:1.18rem;margin:10px 0 8px}
+.caso-txt p{font-size:.95rem}
+.aviso{margin-top:34px;font-size:.82rem;color:var(--tinta-suave);text-align:center;opacity:.85}
+
+/* ============================================================
+   DEPOIMENTOS
+   ============================================================ */
+.depo{background:var(--branco);overflow:hidden}
+.depo::before{
+  content:"";position:absolute;left:-160px;bottom:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,178,106,.22),transparent 70%);
+}
+.grid-depo{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.card-depo{
+  padding:36px 32px;background:linear-gradient(160deg,var(--lavanda-claro),var(--branco));
+  border:1px solid rgba(27,44,168,.1);border-radius:var(--raio);position:relative;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease;
+}
+.card-depo:hover{transform:translateY(-8px);box-shadow:var(--sombra)}
+.card-depo::before{
+  content:"”";position:absolute;top:6px;right:26px;font-family:var(--ff-display);
+  font-size:6rem;color:rgba(43,68,214,.14);line-height:1;
+}
+.estrelas{display:flex;gap:4px;margin-bottom:18px;color:var(--dourado)}
+.estrelas svg{width:18px;height:18px}
+.card-depo blockquote{font-size:1rem;color:var(--tinta);line-height:1.7;margin-bottom:24px}
+.assina{display:flex;align-items:center;gap:14px}
+.assina .ini{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:linear-gradient(140deg,var(--azul-eletrico),var(--azul-profundo));
+  color:var(--branco);font-weight:700;font-size:.95rem;
+}
+.assina b{display:block;font-size:.98rem;color:var(--tinta)}
+.assina span{font-size:.83rem;color:var(--tinta-suave)}
+
+/* ============================================================
+   AGENDE
+   ============================================================ */
+.agende{
+  background:linear-gradient(160deg,var(--azul-profundo) 0%,var(--azul) 60%,var(--azul-eletrico) 100%);
+  color:var(--branco);overflow:hidden;
+}
+.agende-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+.agende .container{position:relative;z-index:2}
+.agende h2{color:var(--branco)}
+.agende .lead{color:rgba(255,255,255,.85)}
+.agende-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:stretch;margin-top:56px}
+.agende-info{padding:44px 40px;display:flex;flex-direction:column;gap:26px}
+.info-item{display:flex;gap:18px;align-items:flex-start}
+.info-item svg{width:24px;height:24px;flex:none;color:var(--dourado-claro);margin-top:4px}
+.info-item b{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado-claro);margin-bottom:6px}
+.info-item p{color:rgba(255,255,255,.9);font-size:1rem;line-height:1.55}
+.info-item a:hover{color:var(--dourado-claro)}
+.agende-info .btn{margin-top:auto;width:100%}
+.mapa{
+  border-radius:var(--raio);overflow:hidden;min-height:480px;
+  border:1px solid rgba(255,255,255,.28);box-shadow:0 40px 80px -40px rgba(0,0,0,.7);
+}
+.mapa iframe{width:100%;height:100%;min-height:480px;border:0;display:block;filter:saturate(1.05)}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.rodape{background:#060C3B;color:rgba(255,255,255,.72);padding:80px 0 0;position:relative}
+.rodape-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;padding-bottom:56px}
+.rodape-logo{height:64px;width:auto;margin-bottom:22px;background:var(--branco);padding:10px 16px;border-radius:14px}
+.rodape p{color:rgba(255,255,255,.66);font-size:.95rem;max-width:38ch}
+.rodape h4{
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);
+  margin-bottom:20px;font-weight:700;font-family:var(--ff-body);
+}
+.rodape li+li{margin-top:12px}
+.rodape li a,.rodape li{font-size:.95rem}
+.rodape li a:hover{color:var(--branco)}
+.redes{display:flex;gap:12px;margin-top:24px}
+.redes a{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:var(--branco);
+  transition:background .35s ease,transform .35s ease;
+}
+.redes a:hover{background:linear-gradient(140deg,var(--dourado),var(--dourado-claro));color:var(--azul-profundo);transform:translateY(-3px)}
+.redes svg{width:20px;height:20px}
+.rodape-base{
+  border-top:1px solid rgba(255,255,255,.1);padding:26px 0;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;
+}
+
+/* WhatsApp flutuante */
+.zap{
+  position:fixed;right:22px;bottom:22px;z-index:90;width:60px;height:60px;border-radius:50%;
+  display:grid;place-items:center;background:#25D366;color:#fff;
+  box-shadow:0 16px 34px -12px rgba(37,211,102,.8);transition:transform .35s ease;
+}
+.zap:hover{transform:scale(1.09)}
+.zap svg{width:30px;height:30px}
+
+/* ============================================================
+   ANIMAÇÃO — estado inicial
+   ============================================================ */
+.anim{opacity:0}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-foto-moldura img{height:520px}
+  .hero-card{left:16px}
+  .quem-grid{grid-template-columns:1fr;gap:56px}
+  .quem-foto img{height:520px}
+  .agende-grid{grid-template-columns:1fr}
+  .grid-ben,.grid-quadros,.grid-casos,.grid-depo{grid-template-columns:repeat(2,1fr)}
+  .rodape-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .nav{display:none}
+  .menu-btn{display:block}
+}
+
+@media (max-width:768px){
+  body{font-size:16px}
+  section{padding:76px 0}
+  .topo .btn{display:none}
+
+  /* HERO no mobile */
+  .hero{min-height:0;padding:120px 0 68px;text-align:center}
+  .hero-bg-desktop{display:none}          /* fundo desktop some */
+  .hero-img-mobile{                        /* imagem exclusiva do mobile, acima da logo */
+    display:block;width:100%;height:270px;object-fit:cover;
+    border-radius:var(--raio);margin-bottom:32px;
+    border:1px solid rgba(255,255,255,.35);box-shadow:0 26px 60px -28px rgba(0,0,0,.7);
+  }
+  .hero-logo{height:70px;margin:0 auto 26px}
+  .hero-selo{margin-inline:auto}
+  .hero-sub{margin-inline:auto}
+  .hero-ctas{justify-content:center}
+  .hero-tags{justify-content:center}
+  .hero-foto{display:none}                 /* foto do especialista fica no desktop/tablet */
+
+  .grid-ben,.grid-quadros,.grid-casos,.grid-depo{grid-template-columns:1fr}
+  .quem-foto img{height:420px;border-radius:220px 220px var(--raio) var(--raio)}
+  .quem-stat{right:12px;bottom:-20px}
+  .rodape-grid{grid-template-columns:1fr;gap:36px}
+  .rodape-base{flex-direction:column;text-align:center}
+  .agende-info{padding:32px 26px}
+  .btn{width:100%;padding:17px 26px}
+  .topo-logo{height:44px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .anim{opacity:1!important;transform:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topo" id="topo">
+  <div class="container topo-in">
+    <a href="#hero" aria-label="Prev Odonto — início">
+      <img src="img/logo-prev-odonto.png" alt="Prev Odonto — Consultório Odontológico" class="topo-logo">
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#beneficios">Diferenciais</a>
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#quadros">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#depoimentos">Depoimentos</a>
+    </nav>
+    <a href="#agende" class="btn btn-primario"><span>Agendar consulta</span></a>
+    <button class="menu-btn" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <!-- fundo 1920 x altura da seção: aparece SÓ no desktop -->
+  <img src="img/hero-desktop.jpg" alt="" class="hero-bg-desktop" aria-hidden="true">
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <!-- imagem exclusiva do mobile, acima da logo -->
+        <img src="img/hero-mobile.jpg" alt="Equipe da Prev Odonto atendendo em Uberlândia" class="hero-img-mobile anim">
+
+        <img src="img/logo-prev-odonto.png" alt="Prev Odonto" class="hero-logo anim">
+
+        <span class="hero-selo vidro anim">Uberlândia · Bairro Pacaembu</span>
+
+        <h1 class="anim">Existe um lugar onde o seu sorriso é <em>cuidado antes de doer</em>.</h1>
+
+        <p class="hero-sub anim">
+          A gente sabe: quase todo mundo chega ao dentista já com dor, já com pressa, já com medo.
+          Na Prev Odonto o caminho é outro. <strong>Prevenir vem antes de tratar</strong> — e tratar,
+          quando é preciso, acontece com uma equipe de especialistas em ortodontia, clínica geral,
+          cirurgia e implantes, cuidando de você e da sua família no mesmo lugar.
+        </p>
+
+        <div class="hero-ctas anim">
+          <a href="#agende" class="btn btn-claro"><span>Quero agendar minha avaliação</span></a>
+          <a href="#quem-somos" class="btn btn-contorno"><span>Conhecer a clínica</span></a>
+        </div>
+
+        <ul class="hero-tags anim">
+          <li>Ortodontia</li>
+          <li>Clínica geral</li>
+          <li>Cirurgia</li>
+          <li>Implantes</li>
+        </ul>
+      </div>
+
+      <div class="hero-foto anim">
+        <div class="hero-foto-moldura">
+          <img src="img/especialista.jpg" alt="Dentista responsável técnico da Prev Odonto">
+        </div>
+        <div class="hero-card vidro">
+          <strong>Equipe Prev Odonto</strong>
+          <span>Especialistas que acompanham cada etapa do seu tratamento, do diagnóstico à manutenção.</span>
+          <span class="cro">Responsável técnico · CRO-MG</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BARRA ================= -->
+<div class="barra" aria-hidden="true">
+  <div class="barra-in" id="barra">
+    <span class="barra-item">Ortodontia</span><span class="barra-item">Implantes</span>
+    <span class="barra-item">Cirurgia oral</span><span class="barra-item">Clínica geral</span>
+    <span class="barra-item">Odontopediatria</span><span class="barra-item">Estética do sorriso</span>
+    <span class="barra-item">Ortodontia</span><span class="barra-item">Implantes</span>
+    <span class="barra-item">Cirurgia oral</span><span class="barra-item">Clínica geral</span>
+    <span class="barra-item">Odontopediatria</span><span class="barra-item">Estética do sorriso</span>
+  </div>
+</div>
+
+<!-- ================= BENEFÍCIOS ================= -->
+<section class="beneficios" id="beneficios">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow centro">Por que a Prev Odonto</span>
+      <h2>Um consultório inteiro pensado para <em>tirar o medo da equação</em></h2>
+      <p class="lead">
+        Cada detalhe do atendimento nasceu de uma pergunta simples: o que faria você voltar ao dentista
+        sem adiar mais uma vez? Estas são as respostas que colocamos em prática todos os dias.
+      </p>
+    </div>
+
+    <div class="grid-ben">
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        </div>
+        <h3>Especialistas, não generalistas de plantão</h3>
+        <p>Ortodontia, cirurgia, implantes e clínica geral com profissionais dedicados a cada área. Você não é encaminhado para fora: o time inteiro está aqui.</p>
+      </article>
+
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 4v5h-5"/></svg>
+        </div>
+        <h3>Diagnóstico explicado do seu jeito</h3>
+        <p>Antes de qualquer procedimento você entende o que tem, por que aconteceu e quais são as opções — com plano de tratamento, prazos e valores no papel.</p>
+      </article>
+
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Uma clínica para a família inteira</h3>
+        <p>Da primeira consulta da criança ao implante do avô. Os prontuários conversam entre si e o cuidado acompanha cada fase da vida.</p>
+      </article>
+
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>Horário que respeita o seu</h3>
+        <p>Agenda organizada para reduzir espera e encaixes de urgência quando a dor não avisa. Você entra, é atendido e segue o seu dia.</p>
+      </article>
+
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Biossegurança sem atalhos</h3>
+        <p>Protocolos rigorosos de esterilização e materiais de marcas reconhecidas. O que não se vê é justamente o que garante a sua segurança.</p>
+      </article>
+
+      <article class="card-ben vidro-claro anim">
+        <div class="card-ben-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        </div>
+        <h3>Prevenção que evita a conta grande</h3>
+        <p>Acompanhamento periódico, orientação de higiene e manutenção. Tratar cedo custa menos, dói menos e preserva o dente que é seu.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUEM SOMOS ================= -->
+<section class="quem" id="quem-somos">
+  <div class="container">
+    <div class="quem-grid">
+      <div class="quem-foto anim">
+        <img src="img/equipe.jpg" alt="Equipe de dentistas da Prev Odonto em Uberlândia">
+        <div class="quem-stat">
+          <b>4</b>
+          <span>especialidades<br>sob o mesmo teto</span>
+        </div>
+      </div>
+
+      <div class="quem-txt">
+        <span class="eyebrow anim">Quem somos</span>
+        <h2 class="anim">Nascemos da vontade de fazer odontologia <em>com tempo e com escuta</em></h2>
+        <p class="anim">
+          A Prev Odonto começou com uma inquietação de consultório: pacientes chegavam calados, com histórias
+          de tratamentos apressados, orçamentos que mudavam no meio do caminho e a sensação de nunca terem
+          entendido o próprio diagnóstico. Decidimos montar uma clínica onde a primeira consulta é conversa,
+          e não venda.
+        </p>
+        <p class="anim">
+          Hoje somos uma equipe de dentistas especializados na Avenida Sete de Setembro, no Pacaembu, atendendo
+          famílias inteiras de Uberlândia. Reunimos <strong>ortodontia, clínica geral, cirurgia e implantes</strong>
+          no mesmo endereço porque acreditamos que o cuidado não deveria ser fragmentado — quando os
+          especialistas discutem o mesmo caso, o resultado aparece mais rápido e dura mais.
+        </p>
+        <p class="anim">
+          O nome carrega o nosso jeito de trabalhar: <strong>prevenir sempre que der, tratar sempre que precisar</strong>,
+          e ser honesto em qualquer um dos dois cenários.
+        </p>
+
+        <ul class="quem-lista">
+          <li class="anim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Equipe multidisciplinar que discute o seu caso em conjunto</span></li>
+          <li class="anim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Plano de tratamento por escrito, com etapas e investimento definidos</span></li>
+          <li class="anim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Ambiente acolhedor para quem tem receio de dentista — inclusive as crianças</span></li>
+          <li class="anim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Acompanhamento depois da alta: manutenção é parte do tratamento</span></li>
+        </ul>
+
+        <div class="hero-ctas anim" style="margin-bottom:0">
+          <a href="#agende" class="btn btn-primario"><span>Conversar com a equipe</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUADROS ATENDIDOS ================= -->
+<section class="quadros sec-escura" id="quadros">
+  <img src="img/textura-azul.jpg" alt="" class="quadros-bg" aria-hidden="true">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow centro">Quadros atendidos</span>
+      <h2>O que costuma trazer nossos pacientes até <em>a cadeira</em></h2>
+      <p class="lead">
+        Se você se reconheceu em alguma dessas situações, saiba que ela tem solução — e que quanto antes
+        for avaliada, mais simples e mais barato costuma ser o caminho.
+      </p>
+    </div>
+
+    <div class="grid-quadros">
+      <article class="card-quadro vidro anim">
+        <span class="num">01</span>
+        <h3>Dentes tortos ou apinhados</h3>
+        <p>Mordida desalinhada, dentes sobrepostos e desgaste irregular. Avaliação ortodôntica com aparelho fixo ou alinhadores, planejada para o seu tempo e a sua rotina.</p>
+      </article>
+
+      <article class="card-quadro vidro anim">
+        <span class="num">02</span>
+        <h3>Falta de um ou mais dentes</h3>
+        <p>Espaços que comprometem a mastigação, a fala e a autoestima. Reabilitação com implantes e próteses que devolvem função antes de devolver estética.</p>
+      </article>
+
+      <article class="card-quadro vidro anim">
+        <span class="num">03</span>
+        <h3>Dor de dente e sensibilidade</h3>
+        <p>Aquela dor que aparece no gelado, no doce ou de madrugada. Diagnóstico da causa — cárie, trinca, retração ou canal — e tratamento antes que o quadro avance.</p>
+      </article>
+
+      <article class="card-quadro vidro anim">
+        <span class="num">04</span>
+        <h3>Gengiva que sangra ou inflama</h3>
+        <p>Sangramento na escovação, mau hálito persistente e gengiva retraída são sinais de doença periodontal. Tratada cedo, evita a perda do dente.</p>
+      </article>
+
+      <article class="card-quadro vidro anim">
+        <span class="num">05</span>
+        <h3>Sisos e cirurgias orais</h3>
+        <p>Sisos inclusos, dentes retidos e pequenas cirurgias realizadas com planejamento por imagem, técnica adequada e orientação completa de pós-operatório.</p>
+      </article>
+
+      <article class="card-quadro vidro anim">
+        <span class="num">06</span>
+        <h3>Sorriso que você evita mostrar</h3>
+        <p>Manchas, restaurações escurecidas, desgaste e desproporção. Clareamento, restaurações estéticas e reabilitação com resultado natural — sem exageros.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTADOS ================= -->
+<section class="resultados" id="resultados">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow centro">Resultados de pacientes</span>
+      <h2>Cada antes e depois começou com <em>uma consulta adiada por anos</em></h2>
+      <p class="lead">
+        Casos reais acompanhados pela nossa equipe. Nenhum deles foi resolvido em um dia — todos foram
+        resolvidos porque alguém decidiu marcar a primeira avaliação.
+      </p>
+    </div>
+
+    <div class="grid-casos">
+      <article class="caso anim">
+        <div class="caso-imgs">
+          <figure><img src="img/caso-1-antes.jpg" alt="Sorriso antes do tratamento ortodôntico"><figcaption>Antes</figcaption></figure>
+          <figure><img src="img/caso-1-depois.jpg" alt="Sorriso depois do tratamento ortodôntico"><figcaption>Depois</figcaption></figure>
+        </div>
+        <div class="caso-txt">
+          <span class="tag">Ortodontia</span>
+          <h3>Apinhamento corrigido e mordida alinhada</h3>
+          <p>Paciente adulta que evitava sorrir em fotos. Tratamento ortodôntico com acompanhamento mensal e contenção para manter o resultado.</p>
+        </div>
+      </article>
+
+      <article class="caso anim">
+        <div class="caso-imgs">
+          <figure><img src="img/caso-2-antes.jpg" alt="Ausência dentária antes do implante"><figcaption>Antes</figcaption></figure>
+          <figure><img src="img/caso-2-depois.jpg" alt="Sorriso reabilitado com implante"><figcaption>Depois</figcaption></figure>
+        </div>
+        <div class="caso-txt">
+          <span class="tag">Implantes</span>
+          <h3>Mastigação recuperada com implante unitário</h3>
+          <p>Ausência dentária que já comprometia a mastigação de um lado só. Planejamento por imagem, cirurgia e prótese sobre implante.</p>
+        </div>
+      </article>
+
+      <article class="caso anim">
+        <div class="caso-imgs">
+          <figure><img src="img/caso-3-antes.jpg" alt="Dentes manchados antes do tratamento estético"><figcaption>Antes</figcaption></figure>
+          <figure><img src="img/caso-3-depois.jpg" alt="Sorriso após restaurações estéticas e clareamento"><figcaption>Depois</figcaption></figure>
+        </div>
+        <div class="caso-txt">
+          <span class="tag">Clínica geral e estética</span>
+          <h3>Restaurações refeitas e clareamento</h3>
+          <p>Restaurações antigas escurecidas e manchas superficiais. Troca das resinas, clareamento supervisionado e protocolo de manutenção.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="aviso">Imagens de pacientes divulgadas mediante autorização. Resultados variam conforme o quadro clínico, a adesão ao tratamento e a manutenção realizada.</p>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="depo" id="depoimentos">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow centro">Depoimentos</span>
+      <h2>Quem senta na cadeira <em>conta melhor do que a gente</em></h2>
+    </div>
+
+    <div class="grid-depo">
+      <article class="card-depo anim">
+        <div class="estrelas" aria-label="5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+        </div>
+        <blockquote>Fiquei seis anos sem ir ao dentista de tanto medo. Na primeira consulta ninguém me julgou, me explicaram tudo com calma e dividimos o tratamento em etapas. Terminei o que achava impossível.</blockquote>
+        <div class="assina"><span class="ini">A</span><div><b>Ana Paula M.</b><span>Paciente de ortodontia</span></div></div>
+      </article>
+
+      <article class="card-depo anim">
+        <div class="estrelas" aria-label="5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+        </div>
+        <blockquote>Perdi um dente há anos e mastigava só de um lado. O implante mudou até a forma como eu como. O que mais me marcou foi receber o orçamento fechado antes de começar, sem surpresa nenhuma.</blockquote>
+        <div class="assina"><span class="ini">R</span><div><b>Ricardo S.</b><span>Paciente de implante</span></div></div>
+      </article>
+
+      <article class="card-depo anim">
+        <div class="estrelas" aria-label="5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4-6.2 3.4L7 14.2 2 9.4l7-.9z"/></svg>
+        </div>
+        <blockquote>Levei meus dois filhos e agora a família inteira se trata aqui. As crianças saem da consulta rindo, e isso para mim vale mais do que qualquer propaganda.</blockquote>
+        <div class="assina"><span class="ini">J</span><div><b>Juliana F.</b><span>Mãe de dois pacientes</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AGENDE ================= -->
+<section class="agende sec-escura" id="agende">
+  <img src="img/consultorio.jpg" alt="" class="agende-bg" aria-hidden="true">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow centro">Agende sua consulta</span>
+      <h2>Sua avaliação começa com <em>uma conversa, não com uma broca</em></h2>
+      <p class="lead">
+        Estamos na Avenida Sete de Setembro, no Pacaembu — fácil de chegar de qualquer região de Uberlândia.
+        Escolha o horário, venha conhecer a equipe e saia daqui sabendo exatamente o que fazer com o seu sorriso.
+      </p>
+    </div>
+
+    <div class="agende-grid">
+      <div class="agende-info vidro anim">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <b>Endereço</b>
+            <p>Avenida Sete de Setembro, 350<br>Pacaembu · Uberlândia/MG · 38401-568</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <div>
+            <b>Telefone e WhatsApp</b>
+            <p><a href="https://wa.me/5534000000000" target="_blank" rel="noopener">(34) 0000-0000 — inserir número oficial</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <b>Horário de atendimento</b>
+            <p>Segunda a sexta · 08h às 18h<br>Sábado · 08h às 12h</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <div>
+            <b>Instagram</b>
+            <p><a href="https://www.instagram.com/prev.odonto/" target="_blank" rel="noopener">@prev.odonto</a></p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/5534000000000" target="_blank" rel="noopener" class="btn btn-claro"><span>Agendar pelo WhatsApp</span></a>
+      </div>
+
+      <div class="mapa anim">
+        <iframe
+          title="Localização da Prev Odonto — Avenida Sete de Setembro, 350, Pacaembu, Uberlândia"
+          src="https://www.google.com/maps?q=Avenida+Sete+de+Setembro,+350+-+Pacaembu,+Uberl%C3%A2ndia+-+MG,+38401-568&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape-grid">
+      <div>
+        <img src="img/logo-prev-odonto.png" alt="Prev Odonto" class="rodape-logo">
+        <p>Equipe de dentistas especializados para atender com excelência você e sua família. Ortodontia, clínica geral, cirurgia e implantes em Uberlândia.</p>
+        <div class="redes">
+          <a href="https://www.instagram.com/prev.odonto/" target="_blank" rel="noopener" aria-label="Instagram da Prev Odonto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/5534000000000" target="_blank" rel="noopener" aria-label="WhatsApp da Prev Odonto">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.2-.1 3.5a10 10 0 0 0 4 3.9c1.5.7 2.7.6 3.4-.1.3-.3.5-.8.5-1.2v-.4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#beneficios">Diferenciais</a></li>
+          <li><a href="#quem-somos">Quem somos</a></li>
+          <li><a href="#quadros">Quadros atendidos</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#agende">Agende sua consulta</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Atendimento</h4>
+        <ul>
+          <li>Avenida Sete de Setembro, 350</li>
+          <li>Pacaembu · Uberlândia/MG</li>
+          <li>CEP 38401-568</li>
+          <li>Segunda a sexta · 08h às 18h</li>
+          <li>Sábado · 08h às 12h</li>
+          <li><a href="https://www.instagram.com/prev.odonto/" target="_blank" rel="noopener">@prev.odonto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape-base">
+      <span>© <span id="ano"></span> Prev Odonto — Consultório Odontológico. Todos os direitos reservados.</span>
+      <span>Responsável técnico: inserir nome e CRO-MG</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5534000000000" target="_blank" rel="noopener" class="zap" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.2-.1 3.5a10 10 0 0 0 4 3.9c1.5.7 2.7.6 3.4-.1.3-.3.5-.8.5-1.2v-.4z"/></svg>
+</a>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+document.getElementById('ano').textContent = new Date().getFullYear();
+
+const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Rede de segurança: se o GSAP não carregar (CDN bloqueada, sem internet),
+   o conteúdo aparece normalmente, apenas sem animação. */
+if(!window.gsap){
+  document.querySelectorAll('.anim').forEach(el => el.style.opacity = '1');
+  document.documentElement.style.scrollBehavior = 'smooth';
+  throw new Error('GSAP não carregou — animações desativadas.');
+}
+
+/* ---------- Scroll suave (Lenis + ScrollTrigger) ---------- */
+if(!semMovimento && window.Lenis){
+  const lenis = new Lenis({ duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t => lenis.raf(t*1000));
+  gsap.ticker.lagSmoothing(0);
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const alvo = document.querySelector(a.getAttribute('href'));
+      if(alvo){ e.preventDefault(); lenis.scrollTo(alvo, { offset:-80, duration:1.3 }); }
+    });
+  });
+} else {
+  document.documentElement.style.scrollBehavior = 'smooth';
+}
+
+gsap.registerPlugin(ScrollTrigger);
+
+/* Os elementos .anim começam com opacity:0 no CSS só para evitar o "flash" antes
+   do GSAP carregar. Precisam voltar a opacity:1 ANTES de qualquer .from(),
+   senão o GSAP entende que o estado final também é 0 e eles nunca aparecem. */
+gsap.set('.anim', { opacity:1 });
+
+if(!semMovimento){
+  /* ---------- Entrada da hero ---------- */
+  const tl = gsap.timeline({ defaults:{ ease:'power3.out' } });
+  tl.from('.hero-img-mobile', { y:40, autoAlpha:0, duration:.9 })
+    .from('.hero-logo',       { y:30, autoAlpha:0, duration:.8 }, '-=.5')
+    .from('.hero-selo',       { y:20, autoAlpha:0, duration:.6 }, '-=.5')
+    .from('.hero h1',         { y:44, autoAlpha:0, duration:1 },  '-=.4')
+    .from('.hero-sub',        { y:28, autoAlpha:0, duration:.8 }, '-=.6')
+    .from('.hero-ctas',       { y:24, autoAlpha:0, duration:.7 }, '-=.5')
+    .from('.hero-tags li',    { y:18, autoAlpha:0, duration:.5, stagger:.08 }, '-=.5')
+    .from('.hero-foto',       { x:70, autoAlpha:0, duration:1.2 }, '-=1.1')
+    .from('.hero-card',       { y:30, autoAlpha:0, duration:.8 }, '-=.6');
+
+  /* ---------- Parallax do fundo da hero ---------- */
+  gsap.to('.hero-bg-desktop', {
+    yPercent:12, ease:'none',
+    scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true }
+  });
+
+  /* ---------- Faixa de especialidades ---------- */
+  gsap.to('#barra', { xPercent:-50, duration:26, ease:'none', repeat:-1 });
+
+  /* ---------- Revelação por scroll ---------- */
+  const revelar = (sel, opcoes={}) => {
+    gsap.utils.toArray(sel).forEach(el=>{
+      gsap.from(el, {
+        y:opcoes.y ?? 46, autoAlpha:0, duration:opcoes.duration ?? .9, ease:'power3.out',
+        scrollTrigger:{ trigger:el, start:'top 88%' }
+      });
+    });
+  };
+
+  gsap.utils.toArray('section').forEach(sec=>{
+    const itens = sec.querySelectorAll('.eyebrow, h2, .lead');
+    if(itens.length){
+      gsap.from(itens, {
+        y:38, autoAlpha:0, duration:.9, stagger:.12, ease:'power3.out',
+        scrollTrigger:{ trigger:sec, start:'top 78%' }
+      });
+    }
+  });
+
+  ['.card-ben','.card-quadro','.caso','.card-depo'].forEach(sel=>{
+    gsap.utils.toArray(sel).forEach((el,i)=>{
+      gsap.from(el, {
+        y:56, autoAlpha:0, duration:.85, delay:(i%3)*.1, ease:'power3.out',
+        scrollTrigger:{ trigger:el, start:'top 90%' }
+      });
+    });
+  });
+
+  revelar('.quem-foto', { y:60 });
+  revelar('.quem-txt p');
+  revelar('.quem-lista li', { y:24, duration:.6 });
+  revelar('.agende-info', { y:50 });
+  revelar('.mapa', { y:50 });
+
+  /* ---------- Parallax leve nas fotos ---------- */
+  gsap.to('.quem-foto img', {
+    yPercent:-6, ease:'none',
+    scrollTrigger:{ trigger:'.quem', start:'top bottom', end:'bottom top', scrub:true }
+  });
+  gsap.to('.quadros-bg', {
+    yPercent:8, ease:'none',
+    scrollTrigger:{ trigger:'.quadros', start:'top bottom', end:'bottom top', scrub:true }
+  });
+
+  /* ---------- Hover: cartões acompanham o cursor ---------- */
+  document.querySelectorAll('.card-ben, .card-quadro, .caso, .card-depo').forEach(card=>{
+    const mover = e=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      gsap.to(card, { rotateY:x*5, rotateX:-y*5, transformPerspective:900, duration:.5, ease:'power2.out' });
+    };
+    card.addEventListener('mousemove', mover);
+    card.addEventListener('mouseleave', ()=> gsap.to(card, { rotateY:0, rotateX:0, duration:.7, ease:'elastic.out(1,.6)' }));
+  });
+
+  /* ---------- Hover: botões e ícones ---------- */
+  document.querySelectorAll('.btn').forEach(b=>{
+    b.addEventListener('mouseenter', ()=> gsap.to(b, { scale:1.035, duration:.35, ease:'power2.out' }));
+    b.addEventListener('mouseleave', ()=> gsap.to(b, { scale:1, duration:.45, ease:'power2.out' }));
+  });
+  document.querySelectorAll('.card-ben').forEach(c=>{
+    const ic = c.querySelector('.card-ben-icone');
+    c.addEventListener('mouseenter', ()=> gsap.to(ic, { rotate:-8, scale:1.08, duration:.45, ease:'back.out(2)' }));
+    c.addEventListener('mouseleave', ()=> gsap.to(ic, { rotate:0, scale:1, duration:.45, ease:'power2.out' }));
+  });
+  document.querySelectorAll('.hero-tags li, .redes a').forEach(t=>{
+    t.addEventListener('mouseenter', ()=> gsap.to(t, { y:-4, duration:.3, ease:'power2.out' }));
+    t.addEventListener('mouseleave', ()=> gsap.to(t, { y:0, duration:.4, ease:'power2.out' }));
+  });
+}
+
+/* ---------- Header fixo ---------- */
+const topo = document.getElementById('topo');
+ScrollTrigger.create({
+  start:'top -90',
+  onUpdate: self => topo.classList.toggle('fixo', self.scroll() > 90),
+  onToggle: self => topo.classList.toggle('fixo', self.isActive)
+});
+
+/* ---------- Menu mobile ---------- */
+document.querySelector('.menu-btn')?.addEventListener('click', ()=>{
+  const nav = document.querySelector('.nav');
+  const aberto = nav.style.display === 'flex';
+  Object.assign(nav.style, aberto ? { display:'none' } : {
+    display:'flex', position:'absolute', top:'100%', left:'0', right:'0',
+    flexDirection:'column', gap:'18px', padding:'26px 24px',
+    background:'rgba(255,255,255,.96)', backdropFilter:'blur(16px)',
+    boxShadow:'0 24px 50px -30px rgba(11,24,115,.7)'
+  });
+});
+</script>
+</body>
+</html>
